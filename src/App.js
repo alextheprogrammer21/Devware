@@ -4,8 +4,12 @@
 
 import React from 'react';
 import axios from 'axios';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Card from 'react-bootstrap/Card'
+// import Button from 'react-bootstrap/Button'
 import './App.css';
 import "./Search.css";
+import "./List.css";
 
 function App() {
 
@@ -33,9 +37,12 @@ function App() {
       }
    
         const listOfSearchResults = searchResults.map((item) => {
-          // return <Habit data={singleHabit} />;
-          // return <p> {item} </p>
-          console.log(item)
+          return (
+
+<li class="sub"> 
+ <button>{item.id}</button>
+</li>
+          )
         });
       
 
@@ -52,8 +59,9 @@ function App() {
         <i class="fa fa-search"></i>
      </button>
    </div>
-
-   {searchedBool ? listOfSearchResults : <div> </div>}
+   <ul id="menu" >
+   {searchedBool ? listOfSearchResults : <div> <h6>Search for any kind of devware you want and then use linux to install it. Powered by github.</h6> </div>}
+   </ul>
 
 </div>
       </header>
