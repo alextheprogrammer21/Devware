@@ -11,7 +11,8 @@ function App() {
 
   //---------------------STATES-------------------------//
   let [searchTerm, setSearchTerm] = React.useState('');
-
+  let [searchedBool, setSearchedBool] = React.useState(false);
+  let [searchResults, setSearchResults] = React.useState([]);
     //----------------------------FUNCTIONS-----------------------------------//
     function handleInputChange(event) {
       setSearchTerm(event.target.value)
@@ -19,24 +20,24 @@ function App() {
 
     function searchApps(e) {
       e.preventDefault();
-  
+      setSearchedBool(true)
+
       console.log(searchTerm)
       Promise.all([
         Promise.resolve(axios.get(`https://api.github.com/search/repositories?q=${searchTerm}`)),
       ]).then((d) => {
-        const data = d[0].data.items[1]
+        const data = d[0].data.items
         console.log(data)
-        }) 
+        setSearchResults(data);
+        })
       }
-        // setState(copy)
-  
-        // emailjs.send('default_service', 'template_5ul93ngj', state[0], 'user_XAbULWNSID71XKJV4cpTz')
-        // .then((result) => {
-        // }, (error) => {
-        //     alert(error.text);
-        // });
    
-  
+        const listOfSearchResults = searchResults.map((item) => {
+          // return <Habit data={singleHabit} />;
+          // return <p> {item} </p>
+          console.log(item)
+        });
+      
 
 //-----------------------HTML DISPLAY------------------------------//
 
@@ -51,6 +52,9 @@ function App() {
         <i class="fa fa-search"></i>
      </button>
    </div>
+
+   {searchedBool ? listOfSearchResults : <div> </div>}
+
 </div>
       </header>
     </div>
