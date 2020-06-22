@@ -6,15 +6,14 @@ Devware allows users to search for and download devware applications for free.
 
 ## Final Product
 
-!["screenshot of URLs page"](https://github.com/alextheprogrammer21/tweeter/blob/master/public/images/screenshot_1.png?raw=true)
-!["screenshot edit URLs page"](https://github.com/alextheprogrammer21/tweeter/blob/master/public/images/screenshot_2.png?raw=true)
+!["screenshot of homepage"](hhttps://raw.githubusercontent.com/alextheprogrammer21/Devware/master/src/images/1.PNG)
+!["screenshot of searched page"](https://raw.githubusercontent.com/alextheprogrammer21/Devware/master/src/images/2.PNG)
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+- React
 
 ## Getting Started
 
 - Install all dependencies (using the `npm install` command).
-- Run the development web server using the `node express_server.js` command.
+- Run the development web server using the `npm start` command.
