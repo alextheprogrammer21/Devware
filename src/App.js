@@ -4,9 +4,6 @@
 
 import React from 'react';
 import axios from 'axios';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import Card from 'react-bootstrap/Card'
-// import Button from 'react-bootstrap/Button'
 import './App.css';
 import "./Search.css";
 import "./List.css";
@@ -21,6 +18,7 @@ function App() {
     function handleInputChange(event) {
       setSearchTerm(event.target.value)
 }
+
 
     function searchApps(e) {
       e.preventDefault();
@@ -40,7 +38,7 @@ function App() {
           return (
 
 <li class="sub"> 
- <button>{item.id}</button>
+ <button onClick={() => {window.open(`https://github.com/${item.full_name}/archive/master.zip`)}}>{item.full_name}</button>
 </li>
           )
         });
@@ -52,6 +50,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <div class="wrap">
+        <h1>Devware</h1>
    <div class="search">
       <input type="text" class="searchTerm" placeholder="What are you looking for?" onChange={handleInputChange}/>
       <button type="submit" class="searchButton" onClick={searchApps}> 
@@ -60,11 +59,18 @@ function App() {
      </button>
    </div>
    <ul id="menu" >
-   {searchedBool ? listOfSearchResults : <div> <h6>Search for any kind of devware you want and then use linux to install it. Powered by github.</h6> </div>}
+   {searchedBool ? listOfSearchResults : <div> <h6 class='intro'>People make software to sell to you. People make freeware to give away to you. There is also a vast sea of open source
+   projects that developers make for various reasons. I call these devwares. Search for any kind of devware you want and then use linux to install it. Powered by github.</h6> </div>}
    </ul>
 
 </div>
       </header>
+
+      <footer>
+  <p>Author: Alex Setia </p>
+  <p><a href="mailto:abhisetia0@gmail.com.com">abhisetia0@gmail.com</a></p>
+</footer>
+
     </div>
   );
 }
