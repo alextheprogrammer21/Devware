@@ -6,7 +6,7 @@ Devware allows users to search for and download devware applications for free.
 
 ## Final Product
 
-!["screenshot of homepage"](hhttps://raw.githubusercontent.com/alextheprogrammer21/Devware/master/src/images/1.PNG)
+!["screenshot of homepage"](https://raw.githubusercontent.com/alextheprogrammer21/Devware/master/src/images/1.PNG)
 !["screenshot of searched page"](https://raw.githubusercontent.com/alextheprogrammer21/Devware/master/src/images/2.PNG)
 
 ## Dependencies
