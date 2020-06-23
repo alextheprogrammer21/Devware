@@ -29,7 +29,6 @@ function App() {
         Promise.resolve(axios.get(`https://api.github.com/search/repositories?q=${searchTerm}`)),
       ]).then((d) => {
         const data = d[0].data.items
-        console.log(data)
         setSearchResults(data);
         })
       }
