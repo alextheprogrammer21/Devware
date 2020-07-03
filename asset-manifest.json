@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Devware/static/css/main.604db51a.chunk.css",
-    "main.js": "/Devware/static/js/main.9d1dd03d.chunk.js",
-    "main.js.map": "/Devware/static/js/main.9d1dd03d.chunk.js.map",
+    "main.js": "/Devware/static/js/main.7d0ff22e.chunk.js",
+    "main.js.map": "/Devware/static/js/main.7d0ff22e.chunk.js.map",
     "runtime-main.js": "/Devware/static/js/runtime-main.421bb3f8.js",
     "runtime-main.js.map": "/Devware/static/js/runtime-main.421bb3f8.js.map",
     "static/css/2.af3c1da9.chunk.css": "/Devware/static/css/2.af3c1da9.chunk.css",
     "static/js/2.72d0d748.chunk.js": "/Devware/static/js/2.72d0d748.chunk.js",
     "static/js/2.72d0d748.chunk.js.map": "/Devware/static/js/2.72d0d748.chunk.js.map",
     "index.html": "/Devware/index.html",
-    "precache-manifest.120afd8962493eda2976e786313b808f.js": "/Devware/precache-manifest.120afd8962493eda2976e786313b808f.js",
+    "precache-manifest.2a94e89962692fa875dd6bc2f4e41847.js": "/Devware/precache-manifest.2a94e89962692fa875dd6bc2f4e41847.js",
     "service-worker.js": "/Devware/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/Devware/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.604db51a.chunk.css.map": "/Devware/static/css/main.604db51a.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.72d0d748.chunk.js",
     "static/css/main.604db51a.chunk.css",
-    "static/js/main.9d1dd03d.chunk.js"
+    "static/js/main.7d0ff22e.chunk.js"
   ]
 }
