@@ -4,23 +4,29 @@
 
 import React from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import "./Search.css";
 import "./List.css";
-
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+import AboutInfo from "./AboutInfo"
 function App() {
 
   //---------------------STATES-------------------------//
   let [searchTerm, setSearchTerm] = React.useState('');
   let [searchedBool, setSearchedBool] = React.useState(false);
   let [searchResults, setSearchResults] = React.useState([]);
+  const [show, setShow] = React.useState(false);
     //----------------------------FUNCTIONS-----------------------------------//
     function handleInputChange(event) {
       setSearchTerm(event.target.value)
 }
 
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
 
-    function searchApps(e) {
+  function searchApps(e) {
       e.preventDefault();
       setSearchedBool(true)
 
@@ -47,29 +53,48 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+<header class="header">
+  <a href="" class="logo">Devware</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li onClick={handleShow}><a href="#about">About</a></li>
+  </ul>
+</header>
+
+<Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>About Devware</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>There's been software that I've purchased before. There's also been freeware that I was able to download for free. However, when I started programming, I created a lot of things that could be useful for others around the globe, but was instead just put on github and to be forgotten about by everyone except my resume. The case was the same for thousands of other people on github. That's why I made devware. Devware is a search tool to find programs that people have put in time and effort into making for various reasons and allows other who aren't as familiar with github to download it with a simple click of a button. It's free but it's not exactly freeware. It has the functionality of software but it's not exactly software. It's developer ware, or devware.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
       <div class="wrap">
-        <h1>Devware</h1>
-   <div class="search">
+      <div id="DIV_3">
+			<img src="https://raw.githubusercontent.com/alextheprogrammer21/Images/master/Devware-Logo.png" alt="Devware" id="IMG_4" />
+		</div>
+
+
+       <div class="search">
       <input type="text" class="searchTerm" placeholder="What are you looking for?" onChange={handleInputChange}/>
       <button type="submit" class="searchButton" onClick={searchApps}> 
-      🔍
         <i class="fa fa-search"></i>
+        🔍
      </button>
    </div>
+
+   
    <ul id="menu" >
-   {searchedBool ? listOfSearchResults : <div> <h6 class='intro'>People make software to sell to you. People make freeware to give away to you. There is also a vast sea of open source
-   projects that developers make for various reasons. I call these devwares. Search for any kind of devware you want and then use linux to install it. Powered by github.</h6> </div>}
+   {searchedBool ? listOfSearchResults : <div> </div>}
    </ul>
-
 </div>
-      </header>
 
-      <footer>
-  <p>Author: Alex Setia </p>
-  <p><a href="mailto:abhisetia0@gmail.com.com">abhisetia0@gmail.com</a></p>
-</footer>
-
+<div class="footer">© 2020, Built by me using React :) </div>
     </div>
   );
 }
